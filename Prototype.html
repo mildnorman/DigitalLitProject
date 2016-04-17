@@ -5,7 +5,15 @@
 <title>Test</title>
 
 </head>
-<!--SCRIPT-->
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<style>
+	body {background-color: #E0E0E0;
+	text-align: center;
+	font-family: 'Roboto',serif;
+	
+	}
+	
+</style>
 
 
 </head>
@@ -13,7 +21,6 @@
 <body>
 
 <div id = "div1">
-<p> test </p>
 </div>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
@@ -30,21 +37,21 @@
 	{
 		for(var j = 0; j < words.length;j++)
 		{
-			if(words[i] == words[j])
+			if(words[i] == words[j]){
 			
 				wordCount[i]++;
 			}
 		}
 		var temp = document.createElement("span");
 		temp.id = "span" + i;
-		temp.innerHTML = words[i] + " " + wordCount[i] + " ";
+		temp.innerHTML = words[i] + " " ;
 		bodyDiv.appendChild(temp);
 		if(i % 4 == 0 && i != 0)
 		{
 			var newLine = document.createElement("p");
 			bodyDiv.appendChild(newLine);
 		}
-		$("#span" + i).fadeOut(100000 - (wordCount[i] * 2500));
+		$("#span" + i).fadeOut(100000 - (wordCount[i] * 1000));
 	}
 	
 	
